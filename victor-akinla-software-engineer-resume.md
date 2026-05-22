@@ -7,7 +7,7 @@ LinkedIn: https://ie.linkedin.com/in/victor-akinla-21061a88 | GitHub: https://gi
 
 ## Professional Summary
 
-Software Engineer with hands-on **full-stack** and **backend** experience shipping production features across **React**, **Go**, **PHP**, and **PostgreSQL** in **microservices** and legacy-integrated environments. Proven ability to own **REST API** design, **transactional processing**, **API integration** between modern and legacy platforms, **authentication** patterns for server-to-server services, and **GitLab CI/CD** releases to test and production. Strong **debugging** track record resolving cross-stack defects across JavaScript, Go, databases, and third-party APIs. Background includes enterprise **identity management** engineering (SailPoint, Oracle Identity Analytics) and **Agile** delivery with cross-functional teams. Seeking **Software Engineer**, **Full-Stack Engineer**, **Backend Engineer**, **Platform Engineer**, **API Engineer**, **React Developer**, or **Golang Developer** roles.
+Software Engineer with production **full-stack** and **backend** experience delivering features across **React**, **Go**, **PHP**, **PostgreSQL**, **REST APIs**, and **microservices**—including **API integration**, **transactional processing**, **authentication**, **GitLab CI/CD** deployments, and **cross-stack debugging**. Enterprise **identity management** background (SailPoint, Oracle Identity Analytics) with **Agile** delivery; targeting Software Engineer, Full-Stack, Backend, Platform, API, React, and Golang roles.
 
 ---
 
