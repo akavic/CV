@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Victor Akinla — CV</title>
+  <style>
+    /* Print-first CV: A4, slim 12mm margins, 10pt body, flush left. */
+    @page {
+      size: A4;
+      margin: 12mm;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      font-size: 10pt;
+    }
+
+    body {
+      font-family: Arial, Helvetica, system-ui, sans-serif;
+      font-size: 10pt;
+      line-height: 1.32;
+      color: #1a1a1a;
+      background: #fff;
+      text-align: left;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    p, li, h1, h2, h3, h4 {
+      text-indent: 0;
+      text-align: left;
+    }
+
+    a {
+      color: #1a1a1a;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    a:hover {
+      color: #000;
+    }
+
+    /* Screen preview: look like a printed A4 page */
+    .page {
+      max-width: 210mm;
+      margin: 0 auto;
+      padding: 12mm;
+      background: #fff;
+    }
+
+    header {
+      margin-bottom: 7pt;
+      padding-bottom: 5pt;
+      border-bottom: 1.5pt solid #1a1a1a;
+    }
+
+    h1 {
+      font-size: 18pt;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      line-height: 1.15;
+      margin: 0 0 4pt 0;
+    }
+
+    .contact {
+      font-size: 9.5pt;
+      line-height: 1.45;
+    }
+
+    .contact span {
+      white-space: nowrap;
+    }
+
+    .sep {
+      display: inline;
+      margin: 0 0.35em;
+      color: #555;
+    }
+
+    section {
+      margin: 0 0 7pt 0;
+    }
+
+    h2 {
+      font-size: 10.5pt;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border-bottom: 0.6pt solid #1a1a1a;
+      padding: 0 0 1.5pt 0;
+      margin: 0 0 5pt 0;
+    }
+
+    .profile p {
+      margin: 0;
+    }
+
+    .edu-item,
+    .job {
+      margin: 0 0 6pt 0;
+    }
+
+    .edu-item:last-child,
+    .job:last-child {
+      margin-bottom: 0;
+    }
+
+    .row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 8pt;
+    }
+
+    .row h3 {
+      font-size: 10.5pt;
+      font-weight: 700;
+      line-height: 1.25;
+    }
+
+    .meta {
+      font-size: 9.5pt;
+      color: #222;
+      white-space: nowrap;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .sub {
+      font-size: 10pt;
+      margin: 0.5pt 0 2.5pt 0;
+    }
+
+    .sub em {
+      font-style: italic;
+      font-weight: 400;
+    }
+
+    .highlight {
+      font-weight: 700;
+    }
+
+    .certs {
+      margin-top: 5pt;
+    }
+
+    ul {
+      margin: 1.5pt 0 0 12pt;
+      padding: 0;
+    }
+
+    li {
+      margin: 0 0 2pt 0;
+    }
+
+    li:last-child {
+      margin-bottom: 0;
+    }
+
+    .project {
+      margin-top: 4.5pt;
+    }
+
+    .project-title {
+      font-weight: 700;
+      font-size: 10pt;
+    }
+
+    .job-subhead {
+      font-weight: 700;
+      font-size: 10pt;
+      margin-top: 3.5pt;
+    }
+
+    .role-tag {
+      font-size: 9.5pt;
+      color: #222;
+    }
+
+    .placeholder {
+      border: 0.6pt dashed #888;
+      padding: 5pt 7pt;
+      background: #fafafa;
+    }
+
+    .placeholder .hint {
+      font-size: 8.5pt;
+      color: #444;
+      margin-bottom: 3pt;
+    }
+
+    .placeholder ul {
+      margin-top: 2pt;
+    }
+
+    .skills-intro {
+      margin-bottom: 3pt;
+    }
+
+    .skills {
+      display: grid;
+      grid-template-columns: 28mm 1fr;
+      column-gap: 8pt;
+      row-gap: 2pt;
+    }
+
+    .skills dt {
+      font-weight: 700;
+    }
+
+    .skills dd {
+      margin: 0;
+    }
+
+    .strengths-list {
+      margin: 0;
+    }
+
+    .print-hint {
+      max-width: 210mm;
+      margin: 8pt auto 0;
+      padding: 0 12mm 10pt;
+      font-size: 8.5pt;
+      color: #555;
+    }
+
+    @media print {
+      html, body {
+        background: #fff;
+        margin: 0;
+        padding: 0;
+        font-size: 10pt;
+        color: #000;
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+      }
+
+      .page {
+        max-width: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .print-hint {
+        display: none;
+      }
+
+      a {
+        text-decoration: none;
+        color: #000;
+      }
+
+      .placeholder {
+        background: transparent;
+        border-style: dashed;
+      }
+
+      /* Keep small blocks together; do not lock whole jobs/sections
+         onto one page (that leaves large empty regions). */
+      header,
+      .edu-item,
+      .skills,
+      .placeholder {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+
+      h2, h3 {
+        break-after: avoid;
+        page-break-after: avoid;
+      }
+
+      .job, .project, li {
+        orphans: 3;
+        widows: 3;
+      }
+    }
+
+    @media screen {
+      html {
+        background: #e8e8e8;
+      }
+
+      body {
+        padding: 10mm 0 14mm;
+      }
+
+      .page {
+        box-shadow: 0 1px 8px rgba(0, 0, 0, 0.12);
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header>
+      <h1>Victor Akinla</h1>
+      <p class="contact">
+        <span>086 073 1698</span><span class="sep">|</span>
+        <span><a href="mailto:vakinla.va@gmail.com">vakinla.va@gmail.com</a></span><span class="sep">|</span>
+        <span><a href="https://ie.linkedin.com/in/victor-akinla-21061a88">linkedin.com/in/victor-akinla-21061a88</a></span><span class="sep">|</span>
+        <span>Nationality: Irish</span>
+      </p>
+    </header>
+
+    <section class="profile" aria-labelledby="profile">
+      <h2 id="profile">Profile</h2>
+      <p>
+        Full-stack developer who is strongest when owning a problem from the screen the user sees through to the row that lands in the database — and the awkward join in the middle, where a new service has to talk to a platform that already exists and cannot go down. I design React front ends with real form complexity, APIs in Go and PHP, and PostgreSQL writes that either commit cleanly across every table involved or do not commit at all. What I care about, more than shipping a happy-path demo, is data integrity under real use: race conditions, mistyped field mappings, saves that look successful and store the wrong thing. That is the work I am stubborn about, and it is also the work I enjoy. I still write code outside of paid hours; it is how I keep a stack in my hands rather than only in tickets.
+      </p>
+    </section>
+
+    <section aria-labelledby="education">
+      <h2 id="education">Education &amp; Certificates</h2>
+      <div class="edu-item">
+        <div class="row">
+          <h3>BSc Computer Science — Dublin City University, Dublin, Ireland</h3>
+          <span class="meta">08/2013 – 05/2017</span>
+        </div>
+      </div>
+      <div class="edu-item certs">
+        <p><span class="highlight">TOGAF 9</span> — The Open Group <em>(Credly verified)</em></p>
+        <p><span class="highlight">AZ-900</span> Microsoft Azure Fundamentals <em>(Credly verified)</em></p>
+      </div>
+    </section>
+
+    <section aria-labelledby="interests">
+      <h2 id="interests">Interests &amp; Hobbies (IT-related)</h2>
+      <!--
+        FILL THIS SECTION IN.
+        Replace the placeholder copy below with your own IT-related interests.
+        Suggested content if you have it:
+          - GitHub profile and notable personal repos
+          - Stack Overflow activity
+          - Personal coding projects (what you built, stack, status)
+          - Technical blogs you write or regularly read
+          - Meetups, user groups, or conferences
+        Previous CV listed GitHub: https://github.com/akavic — confirm before publishing.
+        Delete this comment and the dashed placeholder box once filled in.
+      -->
+      <div class="placeholder">
+        <p class="hint">Placeholder — replace with your own details before circulating this CV.</p>
+        <ul>
+          <li>GitHub: <em>[profile URL and 1–2 repos worth showing]</em></li>
+          <li>Personal projects: <em>[what you built, stack, whether it is live]</em></li>
+          <li>Community: <em>[Stack Overflow, blog, meetups — delete any line you do not use]</em></li>
+        </ul>
+      </div>
+    </section>
+
+    <section aria-labelledby="experience">
+      <h2 id="experience">Work Experience</h2>
+
+      <article class="job">
+        <div class="row">
+          <h3>Software Developer — WiLine</h3>
+          <span class="meta">08/2022 – Present</span>
+        </div>
+        <p class="sub">
+          Full-stack (React, JavaScript, PHP, Go, PostgreSQL) · roughly 75% hands-on coding, 25% design discussion, review, and release work
+        </p>
+        <p>
+          WiLine is a US enterprise connectivity provider (hybrid fibre and fixed wireless, SD-WAN, customer-facing and internal operational systems). The applications I work on sit on the operational path — vendor contracts, customer feedback, file handling, production data — so incorrect writes and broken integrations are not academic; they affect live service.
+        </p>
+        <ul>
+          <li>Full-stack delivery of web applications in PHP, React, JavaScript, and PostgreSQL: new features, production bug fixes in the PHP codebase, and performance/UX improvements rather than a frontend-only or backend-only slice of the stack.</li>
+          <li>Designed, built, and shipped stand-alone scripts and small apps with Node.js, PostgreSQL, and React, including data I/O and deploys to staging and production.</li>
+        </ul>
+
+        <div class="project">
+          <p><span class="project-title">Vendor Contract Management System</span> — built from scratch; flagship example of full-stack ownership on this role.</p>
+          <ul>
+            <li><strong>Frontend:</strong> React forms for creating and managing multiple vendor contract types, each with its own fields and validation rules. A custom React hook owned form state across types so field logic stayed in one place instead of forking per contract.</li>
+            <li><strong>Backend:</strong> REST API in Go with full CRUD. Several operations write to multiple PostgreSQL tables in a single transaction, so a failure in any part rolls the whole save back — contracts never persist half-written.</li>
+            <li><strong>Legacy integration:</strong> File storage already lived on an older PHP platform. Rather than rebuild it, I added two PHP endpoints for upload and download, secured with an API key, and had the Go API call them. Both systems share files without migrating the store or interrupting existing users.</li>
+            <li><strong>Debugging:</strong> Fixed a race where the browser cleared the file list before upload finished, so completed uploads looked like they had vanished. Separately, traced a data-integrity bug to a field-name typo that wrote values into the wrong database column — a save that reported success and stored the wrong thing.</li>
+            <li><strong>Deployment:</strong> GitLab CI/CD with separate pipelines for the React app, the Go binary, and the PHP files, targeting staging and production.</li>
+          </ul>
+        </div>
+
+        <div class="project">
+          <p><span class="project-title">Customer Satisfaction Voting System</span> <span class="role-tag">(Dec 2022 – Feb 2023)</span></p>
+          <ul>
+            <li>Led development of a React front end with PostgreSQL persistence so customers could rate service and the business could act on that feedback, rather than collecting it in an ad-hoc channel.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="job">
+        <div class="row">
+          <h3>Application Engineer — Wipro (Allied Irish Banks)</h3>
+          <span class="meta">04/2019 – 07/2022</span>
+        </div>
+        <p class="sub">
+          Identity &amp; access platforms for a retail bank · mix of defect coding, testing, and operations (roughly 40% coding, 60% UAT, batch runs, change control, and client liaison)
+        </p>
+        <p>
+          Wipro assignment on AIB’s identity estate: SailPoint and Oracle Identity Analytics — the controls that decide who can access what in a bank. Change-controlled, audit-sensitive, and treated as production-critical.
+        </p>
+        <p class="job-subhead">SailPoint (2020–2022)</p>
+        <ul>
+          <li>Defect diagnosis and fixes in the application codebase via Jira, working with developers; Eclipse, XML, and Git for changes; unit, integration, and UAT testing with clients.</li>
+          <li>ITIL change control through BMC Remedy; documented resolutions into a shared knowledge base; led batch-run operations across teams using Unix shell scripting, PuTTY, and WinSCP.</li>
+        </ul>
+        <p class="job-subhead">Oracle Identity Analytics — OIA (2019–2020)</p>
+        <ul>
+          <li>Oracle SQL to integrate new resources into OIA; liaison between teams on identity management; server-side testing of patches, NFS status, and log currency.</li>
+        </ul>
+      </article>
+
+      <article class="job">
+        <div class="row">
+          <h3>Network Engineer — Host Ireland</h3>
+          <span class="meta">09/2018 – 03/2019</span>
+        </div>
+        <p class="sub">
+          Network operations rather than product development · little to no application coding
+        </p>
+        <p>
+          Irish ISP / hosting environment. Day-to-day work was provisioning and support on live customer networks rather than building product software.
+        </p>
+        <ul>
+          <li>Customer IP provisioning (subnetting), helpdesk queries, and routing-path setup on Juniper devices.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section aria-labelledby="skills">
+      <h2 id="skills">Skills</h2>
+      <p class="sub skills-intro">Technology range — all at professional level</p>
+      <dl class="skills">
+        <dt>Frontend</dt>
+        <dd>JavaScript, React, HTML, CSS</dd>
+        <dt>Backend</dt>
+        <dd>Go, PHP, Node.js</dd>
+        <dt>Data &amp; APIs</dt>
+        <dd>PostgreSQL, REST APIs</dd>
+        <dt>Delivery</dt>
+        <dd>Git, GitLab CI/CD, shell scripting, PuTTY</dd>
+        <dt>Identity</dt>
+        <dd>IDAM, SailPoint, Oracle Identity Analytics (OIA)</dd>
+        <dt>Other</dt>
+        <dd>Photoshop</dd>
+      </dl>
+    </section>
+
+    <section aria-labelledby="strengths">
+      <h2 id="strengths">Strengths</h2>
+      <p class="strengths-list">Analytical · Problem-solver · Team-player · Detail-oriented · Innovative · Quick-learner · Adaptable</p>
+    </section>
+
+    <section aria-labelledby="references">
+      <h2 id="references">References</h2>
+      <p>Available upon request.</p>
+    </section>
+  </main>
+  <p class="print-hint">Print to PDF: File → Print (or Ctrl/Cmd+P) → Destination: Save as PDF · Paper: A4 · Margins: Default (this file sets 12mm via @page).</p>
+</body>
+</html>
