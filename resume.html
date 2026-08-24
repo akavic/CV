@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Emmanuel Akinla — CV</title>
+  <style>
+    /* 1-page A4: 12mm margins, 10pt body, left-flush, dense spacing */
+    :root {
+      --ink: #1a1a1a;
+      --muted: #444;
+      --rule: #222;
+      --accent: #1b3a4b;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      font-size: 10pt;
+    }
+
+    body {
+      font-family: Arial, Helvetica, system-ui, sans-serif;
+      font-size: 10pt;
+      line-height: 1.28;
+      color: var(--ink);
+      background: #fff;
+      max-width: 210mm;
+      margin: 0 auto;
+      padding: 12mm;
+      text-align: left;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    p, li, h1, h2, h3, dl, dt, dd {
+      text-align: left;
+      text-indent: 0;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    header {
+      margin-bottom: 0.35em;
+    }
+
+    h1 {
+      font-size: 14pt;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      line-height: 1.1;
+      margin-bottom: 0.15em;
+      color: var(--ink);
+    }
+
+    .contact {
+      font-size: 9.5pt;
+      color: var(--muted);
+      line-height: 1.35;
+    }
+
+    .contact span + span::before {
+      content: " · ";
+      color: #888;
+    }
+
+    section {
+      margin-top: 0.42em;
+    }
+
+    h2 {
+      font-size: 10pt;
+      font-weight: 700;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: var(--accent);
+      border-bottom: 1pt solid var(--rule);
+      padding-bottom: 0.06em;
+      margin-bottom: 0.22em;
+      line-height: 1.15;
+    }
+
+    .profile {
+      margin-top: 0.35em;
+    }
+
+    .profile p {
+      font-size: 10pt;
+      line-height: 1.3;
+    }
+
+    .entry {
+      margin-bottom: 0.32em;
+    }
+
+    .entry:last-child {
+      margin-bottom: 0;
+    }
+
+    .entry-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 0.6em;
+      margin-bottom: 0.02em;
+    }
+
+    .entry-head h3 {
+      font-size: 10pt;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    .entry-meta {
+      font-size: 9.5pt;
+      color: var(--muted);
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .entry-sub {
+      font-size: 9.5pt;
+      color: var(--muted);
+      margin-bottom: 0.08em;
+      font-style: italic;
+    }
+
+    .grade {
+      font-style: normal;
+      font-weight: 700;
+      color: var(--ink);
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    li {
+      position: relative;
+      padding-left: 0.85em;
+      margin-bottom: 0.1em;
+      font-size: 10pt;
+    }
+
+    li::before {
+      content: "–";
+      position: absolute;
+      left: 0;
+      color: var(--muted);
+    }
+
+    li:last-child {
+      margin-bottom: 0;
+    }
+
+    .skills {
+      display: grid;
+      grid-template-columns: 10.5em 1fr;
+      row-gap: 0.08em;
+      column-gap: 0.5em;
+    }
+
+    .skills dt,
+    .skills dd,
+    .refs {
+      font-size: 10pt;
+    }
+
+    .skills dt {
+      font-weight: 700;
+    }
+
+    @page {
+      size: A4;
+      margin: 12mm;
+    }
+
+    @media print {
+      html, body {
+        width: auto;
+        max-width: none;
+        margin: 0;
+        padding: 0;
+        background: #fff;
+        color: #000;
+        font-size: 10pt;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      h2 {
+        break-after: avoid;
+        page-break-after: avoid;
+      }
+
+      .entry-head {
+        break-after: avoid;
+        page-break-after: avoid;
+      }
+    }
+
+    @media screen {
+      body {
+        box-shadow: 0 0 0 1px #ddd;
+        min-height: 297mm;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Emmanuel Akinla</h1>
+    <p class="contact">
+      <span>Meath, Ireland</span><span><a href="tel:+353851847890">+353 85 184 7890</a></span><span><a href="mailto:Eakinla04@gmail.com">Eakinla04@gmail.com</a></span><span>Irish</span><span><a href="https://www.linkedin.com/in/emmanuel-akinla-b526a4243/">LinkedIn</a></span><span><a href="https://github.com/Emmanuel-A04">GitHub</a></span><span><a href="https://cs-detailing.com">cs-detailing.com</a></span>
+    </p>
+  </header>
+
+  <section class="profile" aria-labelledby="profile">
+    <h2 id="profile">Profile</h2>
+    <p>Computer Science and Software Engineering graduate (Maynooth University; degree conferred October 2026) who builds complete systems independently rather than following tutorials. Strongest at owning a problem from first principles — clearest in a browser DAW where I designed a custom audio signal chain from raw Web Audio API gain and delay nodes for real-time reverb and delay, instead of a pre-built effects library. Self-directed work also includes a real-time multiplayer trivia app, finished browser games, and live client sites.</p>
+  </section>
+
+  <section aria-labelledby="education">
+    <h2 id="education">Education &amp; Grade</h2>
+    <div class="entry">
+      <div class="entry-head">
+        <h3>B.Sc. Computer Science and Software Engineering — Maynooth University</h3>
+        <span class="entry-meta">09/2021 – 09/2026</span>
+      </div>
+      <p class="entry-sub">Conferred Oct 2026 · Overall: <span class="grade">2.1 (expected)</span> · CS353 team project: <span class="grade">87%</span> · FYP: browser audio editor (Web Audio API)</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="projects">
+    <h2 id="projects">Key Projects</h2>
+
+    <div class="entry">
+      <div class="entry-head">
+        <h3>Audio Editing &amp; Generation Tool</h3>
+        <span class="entry-meta">Solo FYP</span>
+      </div>
+      <p class="entry-sub">Vanilla JS · Web Audio API · WaveSurfer.js</p>
+      <ul>
+        <li>Browser DAW from scratch: waveform/spectrogram visualisation, multi-track mixer (per-track volume, pan, reverb, delay), drag-and-drop import (WAV/MP3/OGG/FLAC), region markers, and track merging.</li>
+        <li>Custom signal chain from raw GainNode/DelayNode graphs for live reverb and delay — owned routing, wet/dry mix, and latency under live parameter changes instead of a pre-built effects library.</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head">
+        <h3>TriviaQuest — Multiplayer Trivia Web App</h3>
+        <span class="entry-meta">Personal</span>
+      </div>
+      <p class="entry-sub">React · Firebase / Firestore</p>
+      <ul>
+        <li>Real-time multiplayer lobbies with live Firestore state sync; hard part was keeping turn order and scores consistent under concurrent client writes.</li>
+        <li>AI opponents with adjustable difficulty sharing the same turn/timer/scoring path as humans; six categories, turn-based picking, achievements, and persistent high scores.</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head">
+        <h3>Mini Browser Games &amp; CS Detailing</h3>
+        <span class="entry-meta">Personal / client</span>
+      </div>
+      <p class="entry-sub">Vanilla JS · HTML/CSS · Squarespace · <a href="https://cs-detailing.com">cs-detailing.com</a></p>
+      <ul>
+        <li><strong>Times Table Split</strong> &amp; <strong>Tic-Tac-Toe:</strong> finished vanilla JS games — streak scoring, persistent highs, smart wrong-answer distractors; win/draw detection with win-line highlighting.</li>
+        <li><strong>CS Detailing:</strong> responsive live business site (layout, branding, content); comfortable across code-based and no-code web tools.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section aria-labelledby="interests">
+    <h2 id="interests">Interests &amp; Hobbies</h2>
+    <p>Active <a href="https://github.com/Emmanuel-A04">GitHub</a> presence and self-directed learning through personal projects and technical reading — coursework is not the boundary of what I build.</p>
+  </section>
+
+  <section aria-labelledby="experience">
+    <h2 id="experience">Work Experience</h2>
+    <div class="entry">
+      <div class="entry-head">
+        <h3>General Operative (Full-Time) — Panda Waste</h3>
+        <span class="entry-meta">Alongside degree</span>
+      </div>
+      <ul>
+        <li>Full-time operational role alongside a full-time degree: consistent attendance, accurate daily records, and reliable time management under a demanding dual schedule.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section aria-labelledby="skills">
+    <h2 id="skills">Skills</h2>
+    <dl class="skills">
+      <dt>Languages</dt>
+      <dd>Java, Python, JavaScript, TypeScript, SQL, HTML/CSS · Fluent English</dd>
+      <dt>Frameworks &amp; tools</dt>
+      <dd>Node.js, React, REST APIs, Git/GitHub, Spring Boot, databases, Docker, Linux/Unix</dd>
+      <dt>Cloud &amp; AI</dt>
+      <dd>Basic AWS/GCP/Azure, GenAI tools, data analytics concepts</dd>
+    </dl>
+  </section>
+
+  <section aria-labelledby="references">
+    <h2 id="references">References</h2>
+    <p class="refs">Available upon request.</p>
+  </section>
+</body>
+</html>
