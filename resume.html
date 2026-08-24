@@ -24,7 +24,7 @@
     body {
       font-family: Arial, Helvetica, system-ui, sans-serif;
       font-size: 10pt;
-      line-height: 1.38;
+      line-height: 1.32;
       color: #1a1a1a;
       background: #fff;
       text-align: left;
@@ -55,8 +55,8 @@
     }
 
     header {
-      margin-bottom: 9pt;
-      padding-bottom: 7pt;
+      margin-bottom: 7pt;
+      padding-bottom: 5pt;
       border-bottom: 1.5pt solid #1a1a1a;
     }
 
@@ -84,7 +84,7 @@
     }
 
     section {
-      margin: 0 0 8.5pt 0;
+      margin: 0 0 7pt 0;
     }
 
     h2 {
@@ -103,7 +103,7 @@
 
     .edu-item,
     .job {
-      margin: 0 0 7pt 0;
+      margin: 0 0 6pt 0;
     }
 
     .edu-item:last-child,
@@ -155,7 +155,7 @@
     }
 
     li {
-      margin: 0 0 2.4pt 0;
+      margin: 0 0 2pt 0;
     }
 
     li:last-child {
@@ -260,18 +260,24 @@
         border-style: dashed;
       }
 
+      /* Keep small blocks together; do not lock whole jobs/sections
+         onto one page (that leaves large empty regions). */
       header,
-      section,
-      .job,
       .edu-item,
-      .project {
+      .skills,
+      .placeholder {
         break-inside: avoid;
         page-break-inside: avoid;
       }
 
-      h2 {
+      h2, h3 {
         break-after: avoid;
         page-break-after: avoid;
+      }
+
+      .job, .project, li {
+        orphans: 3;
+        widows: 3;
       }
     }
 
@@ -413,7 +419,7 @@
           <span class="meta">09/2018 – 03/2019</span>
         </div>
         <p class="sub">
-          Network operations (not an application-development role) · essentially 0% product coding
+          Network operations rather than product development · little to no application coding
         </p>
         <p>
           Irish ISP / hosting environment. Day-to-day work was provisioning and support on live customer networks rather than building product software.
@@ -428,10 +434,10 @@
       <h2 id="skills">Skills</h2>
       <p class="sub skills-intro">Technology range — all at professional level</p>
       <dl class="skills">
-        <dt>Languages</dt>
-        <dd>JavaScript, Go, PHP, HTML, CSS</dd>
-        <dt>Front end</dt>
-        <dd>React</dd>
+        <dt>Frontend</dt>
+        <dd>JavaScript, React, HTML, CSS</dd>
+        <dt>Backend</dt>
+        <dd>Go, PHP, Node.js</dd>
         <dt>Data &amp; APIs</dt>
         <dd>PostgreSQL, REST APIs</dd>
         <dt>Delivery</dt>
@@ -439,7 +445,7 @@
         <dt>Identity</dt>
         <dd>IDAM, SailPoint, Oracle Identity Analytics (OIA)</dd>
         <dt>Other</dt>
-        <dd>Photoshop; Juniper (from network operations)</dd>
+        <dd>Photoshop</dd>
       </dl>
     </section>
 
