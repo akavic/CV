@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Emmanuel Akinla — CV</title>
+  <style>
+    /* Screen preview matches A4 print: 12mm margins, 10pt body, left-flush text */
+    :root {
+      --ink: #1a1a1a;
+      --muted: #444;
+      --rule: #222;
+      --accent: #1b3a4b;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      font-size: 10pt;
+    }
+
+    body {
+      font-family: Arial, Helvetica, system-ui, sans-serif;
+      font-size: 10pt;
+      line-height: 1.38;
+      color: var(--ink);
+      background: #fff;
+      max-width: 210mm;
+      margin: 0 auto;
+      padding: 12mm;
+      text-align: left;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    p, li, h1, h2, h3, dl, dt, dd {
+      text-align: left;
+      text-indent: 0;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Compact header — not oversized */
+    header {
+      margin-bottom: 0.55em;
+    }
+
+    h1 {
+      font-size: 16.5pt;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      line-height: 1.15;
+      margin-bottom: 0.28em;
+      color: var(--ink);
+    }
+
+    .contact {
+      font-size: 10pt;
+      color: var(--muted);
+      line-height: 1.45;
+    }
+
+    .contact span + span::before {
+      content: " · ";
+      color: #888;
+    }
+
+    /* Section structure */
+    section {
+      margin-top: 0.7em;
+    }
+
+    h2 {
+      font-size: 10.5pt;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+      border-bottom: 1.1pt solid var(--rule);
+      padding-bottom: 0.12em;
+      margin-bottom: 0.38em;
+      line-height: 1.2;
+    }
+
+    /* Profile: featured but still flush-left and compact */
+    .profile {
+      margin-top: 0.55em;
+    }
+
+    .profile p {
+      font-size: 10pt;
+      line-height: 1.42;
+      border-left: 2.5pt solid var(--accent);
+      padding-left: 0.65em;
+    }
+
+    .entry {
+      margin-bottom: 0.55em;
+    }
+
+    .entry:last-child {
+      margin-bottom: 0;
+    }
+
+    .entry-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 0.8em;
+      margin-bottom: 0.08em;
+    }
+
+    .entry-head h3 {
+      font-size: 10pt;
+      font-weight: 700;
+      line-height: 1.25;
+    }
+
+    .entry-meta {
+      font-size: 10pt;
+      color: var(--muted);
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .entry-sub {
+      font-size: 10pt;
+      color: var(--muted);
+      margin-bottom: 0.15em;
+      font-style: italic;
+    }
+
+    .grade {
+      font-style: normal;
+      font-weight: 700;
+      color: var(--ink);
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    li {
+      position: relative;
+      padding-left: 0.95em;
+      margin-bottom: 0.18em;
+      font-size: 10pt;
+    }
+
+    li::before {
+      content: "–";
+      position: absolute;
+      left: 0;
+      color: var(--muted);
+    }
+
+    li:last-child {
+      margin-bottom: 0;
+    }
+
+    .skills {
+      display: grid;
+      grid-template-columns: 11.2em 1fr;
+      row-gap: 0.18em;
+      column-gap: 0.6em;
+    }
+
+    .skills dt {
+      font-weight: 700;
+      font-size: 10pt;
+    }
+
+    .skills dd {
+      font-size: 10pt;
+    }
+
+    .refs {
+      font-size: 10pt;
+    }
+
+    /* Print: slim 12mm page margins, no extra body padding, colour retained */
+    @page {
+      size: A4;
+      margin: 12mm;
+    }
+
+    @media print {
+      html, body {
+        width: auto;
+        max-width: none;
+        margin: 0;
+        padding: 0;
+        background: #fff;
+        color: #000;
+        font-size: 10pt;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      header, h2, .entry, .profile {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+
+      h2 {
+        break-after: avoid;
+        page-break-after: avoid;
+      }
+
+      .entry-head {
+        break-after: avoid;
+        page-break-after: avoid;
+      }
+    }
+
+    @media screen {
+      body {
+        box-shadow: 0 0 0 1px #ddd;
+        min-height: 297mm;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Emmanuel Akinla</h1>
+    <p class="contact">
+      <span>Meath, Ireland</span><span><a href="tel:+353851847890">+353 85 184 7890</a></span><span><a href="mailto:Eakinla04@gmail.com">Eakinla04@gmail.com</a></span><span>Irish</span>
+    </p>
+    <p class="contact">
+      <span>LinkedIn</span><span>GitHub</span><span><a href="https://cs-detailing.com">cs-detailing.com</a></span>
+    </p>
+  </header>
+
+  <section class="profile" aria-labelledby="profile">
+    <h2 id="profile">Profile</h2>
+    <p>Computer Science and Software Engineering graduate (Maynooth University; degree conferred October 2026) who builds complete systems independently rather than following tutorials. Strongest at owning a problem from first principles through to a working product — most clearly shown in a browser-based digital audio workstation where I designed a custom audio signal chain from raw Web Audio API gain and delay nodes to implement real-time reverb and delay, instead of dropping in a pre-built effects library. That kind of decision is typical of how I work: I would rather understand the signal path, the graph, and the latency trade-offs than wrap someone else’s abstraction. I am most engaged when the hard part is real-time behaviour, state that has to stay consistent across clients, or UI that has to feel like a tool rather than a demo. Evidence of that is self-directed: a multiplayer trivia app with live Firebase sync and AI opponents, small browser games shipped as finished products, and client sites built end-to-end in my own time.</p>
+  </section>
+
+  <section aria-labelledby="education">
+    <h2 id="education">Education &amp; Grade</h2>
+    <div class="entry">
+      <div class="entry-head">
+        <h3>B.Sc. Computer Science and Software Engineering — Maynooth University</h3>
+        <span class="entry-meta">09/2021 – 09/2026</span>
+      </div>
+      <p class="entry-sub">Degree conferred October 2026 · Overall grade: <span class="grade">2.1 (expected)</span> · CS353 team project: <span class="grade">87%</span></p>
+      <ul>
+        <li>Final Year Project: <strong>Generating &amp; Editing Music/Audio</strong> — a browser-based audio editor built on the Web Audio API, with waveform/spectrogram visualisation, a custom multi-track mixer, and real-time effects processing designed from first principles rather than a third-party effects stack.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section aria-labelledby="projects">
+    <h2 id="projects">Key Projects</h2>
+
+    <div class="entry">
+      <div class="entry-head">
+        <h3>Audio Editing &amp; Generation Tool</h3>
+        <span class="entry-meta">Solo Final Year Project</span>
+      </div>
+      <p class="entry-sub">Vanilla JavaScript · Web Audio API · WaveSurfer.js · browser DAW</p>
+      <ul>
+        <li>Built a browser-based digital audio workstation from scratch in vanilla JavaScript on the Web Audio API, with WaveSurfer.js for waveform and spectrogram visualisation — a full editing environment, not a single-file playback demo.</li>
+        <li>Designed a custom audio signal chain from raw GainNode and DelayNode graphs to implement real-time reverb and delay, rather than relying on a pre-built effects library. The hard part was keeping the graph stable and latency acceptable while decay, mix, and feedback changed live — which meant owning the routing, wet/dry mix, and parameter updates instead of hiding them behind a plugin API.</li>
+        <li>Developed a multi-track mixer with independent per-track volume, pan, reverb, and delay, each with its own processing chain, summed cleanly to a master output without one track’s effects bleeding into another.</li>
+        <li>Implemented drag-and-drop import (WAV, MP3, OGG, FLAC), region selection and markers for editing, and track-merging to combine multiple sources — the actual DAW workflow of bringing audio in, isolating a region, processing it, and bouncing a mix.</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head">
+        <h3>TriviaQuest — Multiplayer Trivia Web App</h3>
+        <span class="entry-meta">Personal project</span>
+      </div>
+      <p class="entry-sub">React · Firebase / Firestore · real-time multiplayer</p>
+      <ul>
+        <li>Built a real-time multiplayer trivia game in React with Firebase/Firestore, supporting online lobbies whose game state syncs live across players. The difficult piece was turn order and scores staying consistent when several clients write at once — not a local quiz with a shared leaderboard bolted on afterwards.</li>
+        <li>Implemented AI opponents with adjustable difficulty so a session can be played solo or a lobby filled with bots. Bots had to share the same turn model, timers, and scoring path as human players rather than taking a separate “easy mode” shortcut.</li>
+        <li>Designed a category-based question system across six topics with a turn-based picking mechanic and countdown timers, then added achievements, persistent high scores, and background audio with volume controls — game loop, persistence, and presentation treated as one product.</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head">
+        <h3>Mini Browser Games — Times Table Split &amp; Tic-Tac-Toe</h3>
+        <span class="entry-meta">Personal projects</span>
+      </div>
+      <p class="entry-sub">Vanilla JavaScript · HTML · CSS</p>
+      <ul>
+        <li>Built two lightweight browser games from scratch in vanilla JavaScript, HTML, and CSS, each as a finished playable product rather than a tutorial clone.</li>
+        <li><strong>Times Table Split:</strong> a multiplication quiz with streak scoring, persistent high scores, and a smart wrong-answer generator that produces plausible distractors instead of random noise — the part that actually makes the quiz useful as practice.</li>
+        <li><strong>Tic-Tac-Toe:</strong> two-player game with win/draw detection and win-line highlighting, including the less obvious draw and already-won-cell cases that a naive board check tends to miss.</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head">
+        <h3>CS Detailing — Business Website</h3>
+        <span class="entry-meta">Live: <a href="https://cs-detailing.com">cs-detailing.com</a></span>
+      </div>
+      <p class="entry-sub">Squarespace · responsive layout · branding &amp; content structure</p>
+      <ul>
+        <li>Designed and built a responsive business website on Squarespace, covering layout, branding, and content structure for a live client-facing site.</li>
+        <li>One of several client and personal sites built on the platform — comfortable working across both code-based stacks and no-code web tools when the delivery constraint is a working site, not a particular framework.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section aria-labelledby="interests">
+    <h2 id="interests">Interests &amp; Hobbies</h2>
+    <p>Active GitHub presence and ongoing self-directed learning through personal coding projects and technical reading. The projects above are the main evidence of that; outside them I keep building and reading rather than treating coursework as the boundary of what I will attempt.</p>
+  </section>
+
+  <section aria-labelledby="experience">
+    <h2 id="experience">Work Experience</h2>
+    <div class="entry">
+      <div class="entry-head">
+        <h3>General Operative (Full-Time) — Panda Waste</h3>
+        <span class="entry-meta">Alongside degree</span>
+      </div>
+      <ul>
+        <li>Held a full-time operational role at the same time as a full-time Computer Science degree, with consistent attendance, safety standards, and accurate daily records in a fast-paced environment.</li>
+        <li>The dual commitment required reliable time management and attention to detail under a demanding schedule — habits that transfer directly to meeting deadlines and working methodically in a development team.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section aria-labelledby="skills">
+    <h2 id="skills">Skills</h2>
+    <dl class="skills">
+      <dt>Languages</dt>
+      <dd>Java, Python, JavaScript, TypeScript, SQL, HTML/CSS</dd>
+      <dt>Frameworks &amp; tools</dt>
+      <dd>Node.js, React, REST APIs, Git/GitHub, Spring Boot, databases, Docker, Linux/Unix</dd>
+      <dt>Cloud &amp; AI</dt>
+      <dd>Basic knowledge of AWS/GCP/Azure, GenAI tools, and data analytics concepts</dd>
+      <dt>Other</dt>
+      <dd>Fluent English (written and verbal)</dd>
+    </dl>
+  </section>
+
+  <section aria-labelledby="references">
+    <h2 id="references">References</h2>
+    <p class="refs">Available upon request.</p>
+  </section>
+</body>
+</html>
