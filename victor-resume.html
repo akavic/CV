@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Victor Akinla — CV</title>
+  <style>
+    /* Print-ready master CV: 10pt body, left-flush, slim margins, ~2 A4 pages */
+    :root {
+      --ink: #1a1a1a;
+      --muted: #444;
+      --rule: #222;
+      --accent: #1b3a4b;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      font-size: 10pt;
+    }
+
+    body {
+      font-family: Arial, Helvetica, system-ui, sans-serif;
+      font-size: 10pt;
+      line-height: 1.32;
+      color: var(--ink);
+      background: #fff;
+      max-width: 210mm;
+      margin: 0 auto;
+      padding: 12mm;
+      text-align: left;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    p, li, h1, h2, h3, dl, dt, dd {
+      text-align: left;
+      text-indent: 0;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    header {
+      margin-bottom: 0.45em;
+    }
+
+    h1 {
+      font-size: 15.5pt;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      line-height: 1.12;
+      margin-bottom: 0.2em;
+      color: var(--ink);
+    }
+
+    .contact {
+      font-size: 10pt;
+      color: var(--muted);
+      line-height: 1.35;
+    }
+
+    .contact span + span::before {
+      content: " · ";
+      color: #888;
+    }
+
+    section {
+      margin-top: 0.55em;
+    }
+
+    h2 {
+      font-size: 10pt;
+      font-weight: 700;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: var(--accent);
+      border-bottom: 1pt solid var(--rule);
+      padding-bottom: 0.08em;
+      margin-bottom: 0.28em;
+      line-height: 1.2;
+    }
+
+    .profile p {
+      font-size: 10pt;
+      line-height: 1.36;
+    }
+
+    .skills {
+      display: grid;
+      grid-template-columns: 11em 1fr;
+      row-gap: 0.12em;
+      column-gap: 0.5em;
+    }
+
+    .skills dt {
+      font-weight: 700;
+      font-size: 10pt;
+    }
+
+    .skills dd {
+      font-size: 10pt;
+    }
+
+    .entry {
+      margin-bottom: 0.48em;
+    }
+
+    .entry:last-child {
+      margin-bottom: 0;
+    }
+
+    .entry-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 0.7em;
+      margin-bottom: 0.04em;
+    }
+
+    .entry-head h3 {
+      font-size: 10pt;
+      font-weight: 700;
+      line-height: 1.25;
+    }
+
+    .entry-meta {
+      font-size: 10pt;
+      color: var(--muted);
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .entry-sub {
+      font-size: 10pt;
+      color: var(--muted);
+      margin-bottom: 0.15em;
+      font-style: italic;
+    }
+
+    .project {
+      margin: 0.28em 0 0.38em;
+    }
+
+    .project-title {
+      font-size: 10pt;
+      font-weight: 700;
+      margin-bottom: 0.05em;
+    }
+
+    .project-sub {
+      font-size: 10pt;
+      color: var(--muted);
+      font-style: italic;
+      margin-bottom: 0.12em;
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    li {
+      position: relative;
+      padding-left: 0.85em;
+      margin-bottom: 0.14em;
+      font-size: 10pt;
+    }
+
+    li::before {
+      content: "–";
+      position: absolute;
+      left: 0;
+      color: var(--muted);
+    }
+
+    li:last-child {
+      margin-bottom: 0;
+    }
+
+    .edu-line,
+    .certs {
+      font-size: 10pt;
+    }
+
+    .certs {
+      margin-top: 0.2em;
+    }
+
+    @page {
+      size: A4;
+      margin: 12mm;
+    }
+
+    @media print {
+      html, body {
+        width: auto;
+        max-width: none;
+        margin: 0;
+        padding: 0;
+        background: #fff;
+        color: #000;
+        font-size: 10pt;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      h2 {
+        break-after: avoid;
+        page-break-after: avoid;
+      }
+
+      .entry-head,
+      .project-title {
+        break-after: avoid;
+        page-break-after: avoid;
+      }
+
+      /* Avoid forcing large blocks onto the next page (wastes page-1 space) */
+      .project {
+        break-inside: auto;
+      }
+    }
+
+    @media screen {
+      body {
+        box-shadow: 0 0 0 1px #ddd;
+        min-height: 297mm;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Victor Akinla</h1>
+    <p class="contact">
+      <span>Slane, Co. Meath, Ireland</span><span>Irish</span><span><a href="tel:+353860731698">+353 86 073 1698</a></span><span><a href="mailto:vakinla.va@gmail.com">vakinla.va@gmail.com</a></span>
+    </p>
+    <p class="contact">
+      <span><a href="https://ie.linkedin.com/in/victor-akinla-21061a88">LinkedIn</a></span><span><a href="https://github.com/akavic">GitHub</a></span>
+    </p>
+  </header>
+
+  <section class="profile" aria-labelledby="profile">
+    <h2 id="profile">Professional Profile</h2>
+    <p>Full-stack software engineer with production experience delivering React frontends, Go and PHP APIs, and PostgreSQL-backed systems for operational business workflows. Owns work end-to-end — UI, REST APIs, transactional data integrity, legacy integrations, CI/CD, and staging-to-production release. Uses AI-assisted development to accelerate implementation while retaining responsibility for architecture, validation, debugging, and production reliability. Building deeper capability in LLM engineering, RAG, and agentic workflows as a deliberate next step alongside strong software engineering fundamentals.</p>
+  </section>
+
+  <section aria-labelledby="skills">
+    <h2 id="skills">Technical Skills</h2>
+    <dl class="skills">
+      <dt>Programming</dt>
+      <dd>JavaScript, Go, PHP, Node.js</dd>
+      <dt>Frontend</dt>
+      <dd>React, HTML, CSS</dd>
+      <dt>Backend / APIs</dt>
+      <dd>Go, PHP, Node.js, REST APIs</dd>
+      <dt>Data</dt>
+      <dd>PostgreSQL, Oracle SQL</dd>
+      <dt>Engineering / Delivery</dt>
+      <dd>Git, GitLab CI/CD, shell scripting, staging &amp; production deployment</dd>
+      <dt>Identity / Enterprise</dt>
+      <dd>SailPoint, Oracle Identity Analytics, identity &amp; access management (IDAM)</dd>
+      <dt>AI / Emerging</dt>
+      <dd>AI-assisted development, LLM engineering, RAG, agentic workflows, fine-tuning, prompt engineering, AI evaluation</dd>
+      <dt>Other</dt>
+      <dd>Microsoft Azure (AZ-900), TOGAF 9, ITIL / change control, Unix tooling</dd>
+    </dl>
+  </section>
+
+  <section aria-labelledby="ai">
+    <h2 id="ai">AI / LLM Engineering</h2>
+    <ul>
+      <li>Uses AI-assisted development in day-to-day software delivery to accelerate implementation while remaining accountable for technical design, code direction, testing, debugging, and production behaviour.</li>
+      <li>Actively developing practical capability in LLM engineering, Retrieval-Augmented Generation (RAG), agentic workflows, fine-tuning, prompt engineering, and AI evaluation — as a career focus, distinct from current production employment scope.</li>
+      <li>Applies engineering judgement to AI-generated output: validates integrations, data integrity, and edge cases rather than treating generated code as finished work.</li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="experience">
+    <h2 id="experience">Professional Experience</h2>
+
+    <div class="entry">
+      <div class="entry-head">
+        <h3>Software Developer — Wiline</h3>
+        <span class="entry-meta">08/2022 – Present</span>
+      </div>
+      <p class="entry-sub">US enterprise connectivity provider · React, JavaScript, PHP, Go, PostgreSQL, Node.js, REST APIs, Git, GitLab CI/CD · ~75% hands-on coding / ~25% design, review &amp; release</p>
+      <ul>
+        <li>Develop and maintain full-stack web applications used in live operational processes (vendor contracts, customer feedback, file handling, production data, and integrations), where reliability and data integrity matter.</li>
+        <li>Deliver features and production bug fixes across React, PHP, JavaScript, and PostgreSQL; build stand-alone Node.js / PostgreSQL / React scripts and small applications with staging and production deployment.</li>
+        <li>Improve application performance and UX through targeted frontend and backend changes; use Git and GitLab CI/CD for controlled delivery.</li>
+      </ul>
+
+      <div class="project">
+        <p class="project-title">Featured project — Vendor Contract Management System</p>
+        <p class="project-sub">Built from scratch · React · Go REST API · PostgreSQL · PHP file-store integration · GitLab CI/CD · AI-assisted development</p>
+        <ul>
+          <li>Designed and built an end-to-end Vendor Contract Management System covering multiple contract types, complex forms, validation rules, and a custom React hook for shared form state and field logic.</li>
+          <li>Implemented a Go REST API with full CRUD against PostgreSQL, including multi-table transactional writes that roll back on failure to prevent partially persisted contracts.</li>
+          <li>Integrated the Go API with an existing PHP file-storage platform via API-key-protected upload/download endpoints — retaining the legacy store and avoiding migration disruption for existing users.</li>
+          <li>Diagnosed and fixed a browser race condition where the file list cleared before upload completion (completed uploads appeared to vanish), and a field-name typo writing values into the wrong PostgreSQL column — both requiring careful attention to production behaviour and data integrity.</li>
+          <li>Shipped via GitLab CI/CD with separate pipelines for React, Go, and PHP, supporting staging and production deployment.</li>
+          <li>Used AI-assisted development to accelerate implementation while owning architecture, problem decomposition, integration design, validation, debugging, and release readiness — distinguishing generated code from engineered, reliable system behaviour.</li>
+        </ul>
+      </div>
+
+      <div class="project">
+        <p class="project-title">Customer Satisfaction Voting System</p>
+        <p class="project-sub">12/2022 – 02/2023 · React · PostgreSQL</p>
+        <ul>
+          <li>Led development of a React frontend with PostgreSQL persistence enabling customers to submit service ratings and giving the business actionable feedback data — end-to-end ownership from UI through data storage.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head">
+        <h3>Application Engineer — Wipro (Allied Irish Banks)</h3>
+        <span class="entry-meta">04/2019 – 07/2022</span>
+      </div>
+      <p class="entry-sub">Identity &amp; access platforms · SailPoint · Oracle Identity Analytics · Oracle SQL · Eclipse · XML · Git · Unix shell · BMC Remedy · Jira</p>
+      <ul>
+        <li>Supported enterprise identity and access management platforms in an audit-sensitive banking environment, including defect diagnosis, application code changes, and controlled releases.</li>
+        <li>Performed unit, integration, and UAT testing; collaborated with clients and developers to validate fixes and changes before production.</li>
+        <li>Followed ITIL change control using BMC Remedy; documented resolutions for knowledge-base reuse across support and development teams.</li>
+        <li>Integrated resources into Oracle Identity Analytics using Oracle SQL; coordinated batch operations with Unix shell scripting, PuTTY, and WinSCP.</li>
+        <li>Liaised across teams and stakeholders to deliver identity-management outcomes under production support constraints.</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head">
+        <h3>Network Engineer — Host Ireland</h3>
+        <span class="entry-meta">09/2018 – 03/2019</span>
+      </div>
+      <ul>
+        <li>Provisioned customer IP subnets, handled network help-desk queries, and configured routing on Juniper devices in a production network environment.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section aria-labelledby="education">
+    <h2 id="education">Education &amp; Certifications</h2>
+    <div class="entry">
+      <div class="entry-head">
+        <h3>BSc Computer Applications — Dublin City University</h3>
+        <span class="entry-meta">2013 – 2017</span>
+      </div>
+      <p class="edu-line">Relevant modules included data structures &amp; algorithms, databases, and cryptography.</p>
+      <p class="certs"><strong>TOGAF 9</strong> — The Open Group · <strong>AZ-900</strong> Microsoft Azure Fundamentals</p>
+    </div>
+  </section>
+</body>
+</html>
