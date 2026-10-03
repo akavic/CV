@@ -1,7 +1,13 @@
 # Jennifer Otugo — Content Writer / Junior Copywriter CV
 
-Single-file print-ready A4 CV: `cv.html` (HTML + CSS inlined).
+Approved draft exported as a clean 1-page A4 PDF.
 
-## Export to PDF
+## Files
 
-Open `cv.html` in Chrome/Edge → **Ctrl+P** (Windows) or **Cmd+P** (Mac) → Destination: **Save as PDF** → Paper size: **A4** → Margins: **Default** → Save.
+- `Jennifer-Otugo-Content-Writer-CV.pdf` — clean PDF for applications
+- `cv.html` — single-file HTML source (CSS inlined)
+- `cv.pdf` — same content as the named PDF
+
+## Re-export to PDF from browser
+
+Open `cv.html` in Chrome/Edge → **Ctrl+P** / **Cmd+P** → Save as PDF → Paper size: **A4** → Save.
