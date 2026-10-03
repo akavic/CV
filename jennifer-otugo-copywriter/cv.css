@@ -1,0 +1,141 @@
+/* Jennifer Otugo — Content Writer / Junior Copywriter CV
+   ATS-friendly, print-ready A4, left-aligned, minimal */
+
+@page {
+  size: A4;
+  margin: 14mm;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10pt;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, Calibri, sans-serif;
+  font-size: 10pt;
+  line-height: 1.35;
+  color: #111;
+  background: #fff;
+  text-align: left;
+  max-width: 180mm;
+}
+
+/* Screen preview padding */
+@media screen {
+  body {
+    margin: 16px auto;
+    padding: 14mm;
+    box-shadow: 0 0 0 1px #ddd;
+  }
+}
+
+h1 {
+  margin: 0 0 4px 0;
+  font-size: 18pt;
+  font-weight: 700;
+  line-height: 1.15;
+  text-align: left;
+}
+
+.role-line {
+  margin: 0 0 6px 0;
+  font-size: 10.5pt;
+  font-weight: 700;
+}
+
+.contact {
+  margin: 0 0 10px 0;
+  font-size: 9.5pt;
+  line-height: 1.4;
+}
+
+.contact a {
+  color: #111;
+  text-decoration: none;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+}
+
+h2 {
+  margin: 12px 0 4px 0;
+  padding: 0 0 2px 0;
+  font-size: 10.5pt;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  border-bottom: 1px solid #222;
+  text-align: left;
+}
+
+h3 {
+  margin: 8px 0 2px 0;
+  font-size: 10pt;
+  font-weight: 700;
+  text-align: left;
+}
+
+p {
+  margin: 0 0 6px 0;
+  text-align: left;
+}
+
+.meta {
+  margin: 0 0 4px 0;
+  font-size: 9.5pt;
+  font-style: italic;
+  color: #333;
+}
+
+.role-context {
+  margin: 0 0 4px 0;
+}
+
+ul {
+  margin: 2px 0 8px 0;
+  padding-left: 16px;
+}
+
+li {
+  margin: 0 0 3px 0;
+  text-align: left;
+}
+
+.skill-block {
+  margin: 0 0 3px 0;
+}
+
+.skill-block strong {
+  font-weight: 700;
+}
+
+@media print {
+  body {
+    margin: 0;
+    padding: 0;
+    max-width: none;
+    box-shadow: none;
+    background: #fff;
+  }
+
+  a {
+    color: #111;
+    text-decoration: none;
+  }
+
+  h2 {
+    break-after: avoid;
+  }
+
+  h3,
+  .meta {
+    break-after: avoid;
+  }
+}
