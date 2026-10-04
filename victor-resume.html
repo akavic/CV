@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Victor Akinla — CV</title>
   <style>
-    /* Print-ready master CV: 10pt body, left-flush, slim margins, ~2 A4 pages */
+    /* Print-ready CV: 10pt body, left-flush, slim margins, ~2 A4 pages */
     :root {
       --ink: #1a1a1a;
       --muted: #444;
@@ -26,7 +26,7 @@
     body {
       font-family: Arial, Helvetica, system-ui, sans-serif;
       font-size: 10pt;
-      line-height: 1.32;
+      line-height: 1.28;
       color: var(--ink);
       background: #fff;
       max-width: 210mm;
@@ -51,16 +51,16 @@
     }
 
     header {
-      margin-bottom: 0.45em;
+      margin-bottom: 0.35em;
     }
 
     h1 {
-      font-size: 15.5pt;
+      font-size: 14.5pt;
       font-weight: 700;
       letter-spacing: 0.04em;
       text-transform: uppercase;
-      line-height: 1.12;
-      margin-bottom: 0.2em;
+      line-height: 1.1;
+      margin-bottom: 0.15em;
       color: var(--ink);
     }
 
@@ -76,7 +76,7 @@
     }
 
     section {
-      margin-top: 0.55em;
+      margin-top: 0.42em;
     }
 
     h2 {
@@ -86,14 +86,14 @@
       text-transform: uppercase;
       color: var(--accent);
       border-bottom: 1pt solid var(--rule);
-      padding-bottom: 0.08em;
-      margin-bottom: 0.28em;
-      line-height: 1.2;
+      padding-bottom: 0.06em;
+      margin-bottom: 0.22em;
+      line-height: 1.15;
     }
 
     .profile p {
       font-size: 10pt;
-      line-height: 1.36;
+      line-height: 1.3;
     }
 
     .skills {
@@ -113,7 +113,7 @@
     }
 
     .entry {
-      margin-bottom: 0.48em;
+      margin-bottom: 0.38em;
     }
 
     .entry:last-child {
@@ -149,7 +149,7 @@
     }
 
     .project {
-      margin: 0.28em 0 0.38em;
+      margin: 0.2em 0 0.28em;
     }
 
     .project-title {
@@ -174,7 +174,7 @@
     li {
       position: relative;
       padding-left: 0.85em;
-      margin-bottom: 0.14em;
+      margin-bottom: 0.1em;
       font-size: 10pt;
     }
 
@@ -232,7 +232,6 @@
         page-break-after: avoid;
       }
 
-      /* Avoid forcing large blocks onto the next page (wastes page-1 space) */
       .project {
         break-inside: auto;
       }
@@ -250,7 +249,7 @@
   <header>
     <h1>Victor Akinla</h1>
     <p class="contact">
-      <span>Slane, Co. Meath, Ireland</span><span>Irish</span><span><a href="tel:+353860731698">+353 86 073 1698</a></span><span><a href="mailto:vakinla.va@gmail.com">vakinla.va@gmail.com</a></span>
+      <span>Slane, Co. Meath (Dublin hybrid)</span><span>Irish</span><span><a href="tel:+353860731698">+353 86 073 1698</a></span><span><a href="mailto:vakinla.va@gmail.com">vakinla.va@gmail.com</a></span>
     </p>
     <p class="contact">
       <span><a href="https://ie.linkedin.com/in/victor-akinla-21061a88">LinkedIn</a></span><span><a href="https://github.com/akavic">GitHub</a></span>
@@ -259,7 +258,7 @@
 
   <section class="profile" aria-labelledby="profile">
     <h2 id="profile">Professional Profile</h2>
-    <p>Full-stack software engineer with production experience delivering React frontends, Go and PHP APIs, and PostgreSQL-backed systems for operational business workflows. Owns work end-to-end — UI, REST APIs, transactional data integrity, legacy integrations, CI/CD, and staging-to-production release. Uses AI-assisted development to accelerate implementation while retaining responsibility for architecture, validation, debugging, and production reliability. Building deeper capability in LLM engineering, RAG, and agentic workflows as a deliberate next step alongside strong software engineering fundamentals.</p>
+    <p>Full-stack software engineer based in Slane, Co. Meath (Dublin hybrid), shipping production React, Go, PHP and PostgreSQL systems for operational business workflows. Owns delivery end-to-end: complex forms, REST APIs, multi-table transactional data integrity, legacy integrations, GitLab CI/CD, and staging-to-production release. Strongest evidence: a Vendor Contract Management System built from scratch, including production bug ownership (upload race condition; wrong PostgreSQL column write). Uses AI-assisted development as a delivery method while remaining accountable for architecture, validation, and reliability. Prior Wipro/AIB identity-platform work under ITIL change control.</p>
   </section>
 
   <section aria-labelledby="skills">
@@ -274,23 +273,12 @@
       <dt>Data</dt>
       <dd>PostgreSQL, Oracle SQL</dd>
       <dt>Engineering / Delivery</dt>
-      <dd>Git, GitLab CI/CD, shell scripting, staging &amp; production deployment</dd>
-      <dt>Identity / Enterprise</dt>
-      <dd>SailPoint, Oracle Identity Analytics, identity &amp; access management (IDAM)</dd>
-      <dt>AI / Emerging</dt>
-      <dd>AI-assisted development, LLM engineering, RAG, agentic workflows, fine-tuning, prompt engineering, AI evaluation</dd>
+      <dd>Git, GitLab CI/CD, shell scripting, staging &amp; production deployment, AI-assisted development</dd>
+      <dt>Enterprise</dt>
+      <dd>SailPoint, Oracle Identity Analytics, ITIL / change control, Unix tooling</dd>
       <dt>Other</dt>
-      <dd>Microsoft Azure (AZ-900), TOGAF 9, ITIL / change control, Unix tooling</dd>
+      <dd>Microsoft Azure (AZ-900), TOGAF 9</dd>
     </dl>
-  </section>
-
-  <section aria-labelledby="ai">
-    <h2 id="ai">AI / LLM Engineering</h2>
-    <ul>
-      <li>Uses AI-assisted development in day-to-day software delivery to accelerate implementation while remaining accountable for technical design, code direction, testing, debugging, and production behaviour.</li>
-      <li>Actively developing practical capability in LLM engineering, Retrieval-Augmented Generation (RAG), agentic workflows, fine-tuning, prompt engineering, and AI evaluation — as a career focus, distinct from current production employment scope.</li>
-      <li>Applies engineering judgement to AI-generated output: validates integrations, data integrity, and edge cases rather than treating generated code as finished work.</li>
-    </ul>
   </section>
 
   <section aria-labelledby="experience">
@@ -302,32 +290,23 @@
         <span class="entry-meta">08/2022 – Present</span>
       </div>
       <p class="entry-sub">US enterprise connectivity provider · React, JavaScript, PHP, Go, PostgreSQL, Node.js, REST APIs, Git, GitLab CI/CD · ~75% hands-on coding / ~25% design, review &amp; release</p>
-      <ul>
-        <li>Develop and maintain full-stack web applications used in live operational processes (vendor contracts, customer feedback, file handling, production data, and integrations), where reliability and data integrity matter.</li>
-        <li>Deliver features and production bug fixes across React, PHP, JavaScript, and PostgreSQL; build stand-alone Node.js / PostgreSQL / React scripts and small applications with staging and production deployment.</li>
-        <li>Improve application performance and UX through targeted frontend and backend changes; use Git and GitLab CI/CD for controlled delivery.</li>
-      </ul>
 
       <div class="project">
-        <p class="project-title">Featured project — Vendor Contract Management System</p>
-        <p class="project-sub">Built from scratch · React · Go REST API · PostgreSQL · PHP file-store integration · GitLab CI/CD · AI-assisted development</p>
+        <p class="project-title">Vendor Contract Management System — built from scratch</p>
+        <p class="project-sub">React · Go REST API · PostgreSQL · PHP file-store integration · GitLab CI/CD</p>
         <ul>
-          <li>Designed and built an end-to-end Vendor Contract Management System covering multiple contract types, complex forms, validation rules, and a custom React hook for shared form state and field logic.</li>
+          <li>Designed and built an end-to-end Vendor Contract Management System for operational vendor workflows: multiple contract types, complex React forms, validation rules, and a custom React hook for shared form state and field logic.</li>
           <li>Implemented a Go REST API with full CRUD against PostgreSQL, including multi-table transactional writes that roll back on failure to prevent partially persisted contracts.</li>
-          <li>Integrated the Go API with an existing PHP file-storage platform via API-key-protected upload/download endpoints — retaining the legacy store and avoiding migration disruption for existing users.</li>
-          <li>Diagnosed and fixed a browser race condition where the file list cleared before upload completion (completed uploads appeared to vanish), and a field-name typo writing values into the wrong PostgreSQL column — both requiring careful attention to production behaviour and data integrity.</li>
-          <li>Shipped via GitLab CI/CD with separate pipelines for React, Go, and PHP, supporting staging and production deployment.</li>
-          <li>Used AI-assisted development to accelerate implementation while owning architecture, problem decomposition, integration design, validation, debugging, and release readiness — distinguishing generated code from engineered, reliable system behaviour.</li>
+          <li>Integrated the Go API with an existing PHP file-storage platform via API-key-protected upload/download endpoints — retaining the legacy store and avoiding disruption for existing users.</li>
+          <li>Diagnosed and fixed a browser race condition (file list cleared before upload completion) and a field-name typo writing values into the wrong PostgreSQL column — production behaviour and data integrity ownership.</li>
+          <li>Shipped via GitLab CI/CD with separate React, Go, and PHP pipelines across staging and production. Used AI-assisted development to accelerate implementation while owning architecture, validation, debugging, and release readiness.</li>
         </ul>
       </div>
 
-      <div class="project">
-        <p class="project-title">Customer Satisfaction Voting System</p>
-        <p class="project-sub">12/2022 – 02/2023 · React · PostgreSQL</p>
-        <ul>
-          <li>Led development of a React frontend with PostgreSQL persistence enabling customers to submit service ratings and giving the business actionable feedback data — end-to-end ownership from UI through data storage.</li>
-        </ul>
-      </div>
+      <ul>
+        <li>Develop and maintain full-stack apps for live operational processes (contracts, customer feedback, file handling, production data, integrations); deliver features and production bug fixes across React, PHP, JavaScript, and PostgreSQL.</li>
+        <li>Led the Customer Satisfaction Voting System (12/2022 – 02/2023): React frontend with PostgreSQL persistence for service ratings — end-to-end ownership from UI through data storage; also build stand-alone Node.js / PostgreSQL / React scripts with staging and production deployment.</li>
+      </ul>
     </div>
 
     <div class="entry">
@@ -335,13 +314,10 @@
         <h3>Application Engineer — Wipro (Allied Irish Banks)</h3>
         <span class="entry-meta">04/2019 – 07/2022</span>
       </div>
-      <p class="entry-sub">Identity &amp; access platforms · SailPoint · Oracle Identity Analytics · Oracle SQL · Eclipse · XML · Git · Unix shell · BMC Remedy · Jira</p>
+      <p class="entry-sub">Identity &amp; access platforms · SailPoint · Oracle Identity Analytics · Oracle SQL · Git · Unix shell · BMC Remedy · Jira · ITIL</p>
       <ul>
-        <li>Supported enterprise identity and access management platforms in an audit-sensitive banking environment, including defect diagnosis, application code changes, and controlled releases.</li>
-        <li>Performed unit, integration, and UAT testing; collaborated with clients and developers to validate fixes and changes before production.</li>
-        <li>Followed ITIL change control using BMC Remedy; documented resolutions for knowledge-base reuse across support and development teams.</li>
-        <li>Integrated resources into Oracle Identity Analytics using Oracle SQL; coordinated batch operations with Unix shell scripting, PuTTY, and WinSCP.</li>
-        <li>Liaised across teams and stakeholders to deliver identity-management outcomes under production support constraints.</li>
+        <li>Supported enterprise identity platforms in an audit-sensitive banking environment: defect diagnosis, application code changes, and controlled releases under ITIL change control (BMC Remedy).</li>
+        <li>Performed unit, integration, and UAT testing before production; integrated resources into Oracle Identity Analytics with Oracle SQL; coordinated batch operations via Unix shell scripting.</li>
       </ul>
     </div>
 
@@ -350,9 +326,7 @@
         <h3>Network Engineer — Host Ireland</h3>
         <span class="entry-meta">09/2018 – 03/2019</span>
       </div>
-      <ul>
-        <li>Provisioned customer IP subnets, handled network help-desk queries, and configured routing on Juniper devices in a production network environment.</li>
-      </ul>
+      <p>Provisioned customer IP subnets, handled network help-desk queries, and configured routing on Juniper devices.</p>
     </div>
   </section>
 
